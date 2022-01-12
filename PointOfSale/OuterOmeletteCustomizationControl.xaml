@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="PointOfSale.OuterOmeletteCustomizationControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             xmlns:enums="clr-namespace:TheFlyingSaucer.Data.Enums;assembly=TheFlyingSaucer.Data"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="960">
+    <Grid Background="#B4C750">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text=" " Grid.Row="6" Grid.RowSpan="7"  Name="orderDisplay"/>
+
+        <TextBlock Text="Customize Order" FontSize="32" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Button Click="GoBack" Grid.Row="0" Grid.Column="2" Name="goBackButton" FontSize="32">
+            Done
+        </Button>
+        <ToggleButton IsChecked="{Binding Path = SourCream}" Click="HoldSourCream" Grid.Row="2" Grid.ColumnSpan="2" Name="holdSourCreamButton" FontSize="32">
+            Sour Cream
+        </ToggleButton>
+        <ToggleButton IsChecked="{Binding Path = Cheese}" Click="HoldCheese" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Name="holdCheeseButton" FontSize="32">
+            Cheese
+        </ToggleButton>
+        <ToggleButton IsChecked="{Binding Path = Peppers}" Click="HoldPeppers" Grid.Row="3" Grid.ColumnSpan="2" Name="holdPeppersButton" FontSize="32">
+            Peppers
+        </ToggleButton>
+        <ToggleButton IsChecked="{Binding Path = Ham}" Click="HoldHam" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Name="holdHamButton" FontSize="32">
+            Ham
+        </ToggleButton>
+        <ToggleButton  IsChecked="{Binding Path = Onions}" Click="HoldOnions" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Name="holdOnionsButton" FontSize="32">
+           Onions
+        </ToggleButton>
+        <ToggleButton IsChecked="{Binding Path = Mushrooms}" Click="HoldMushrooms" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Name="holdMushroomsButton" FontSize="32">
+            Mushrooms
+        </ToggleButton>
+        <ToggleButton IsChecked="{Binding Path = Spinach}" Click="HoldSpinach" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Name="holdSpinachButton" FontSize="32">
+            Spinach
+        </ToggleButton>
+        <ToggleButton IsChecked="{Binding Path = Tomatoes}" Click="HoldTomatoes" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Name="holdTomatoesButton" FontSize="32">
+            Tomatoes
+        </ToggleButton>
+        <TextBlock Text="Customize Order" FontSize="32" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Border Name="itemContainer" Grid.ColumnSpan="2" Grid.RowSpan="8"></Border>
+    </Grid>
+</UserControl>

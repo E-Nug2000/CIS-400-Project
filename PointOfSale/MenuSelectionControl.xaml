@@ -1,0 +1,126 @@
+﻿<UserControl x:Class="PointOfSale.MenuSelectionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             xmlns:drinks="clr-namespace:TheFlyingSaucer.Data.Drinks;assembly=TheFlyingSaucer.Data"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid Background="#B4C750">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button 
+            Click="AddFlyingSaucer" 
+            Grid.Row="2" Name="addFlyingSaucerButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            The Flying Saucer
+        </Button>
+        <Button 
+            Click="AddLivestockMutilation" 
+            Grid.Row="3" Name="addLivestockMutilationButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Livestock Mutilation
+        </Button>
+        <Button 
+            Click="AddNothingToSeeHere" 
+            Grid.Row="4" Name="addnothingToSeeHereButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Nothing To See Here
+        </Button>
+        <Button 
+            Click="AddCrashedSaucer" 
+            Grid.Row="5" Name="addCrashedSaucerButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Crashed Saucer
+        </Button>
+        <Button 
+            Click="AddOuterOmelette" 
+            Grid.Row="6" Name="addOuterOmeletteButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Outer Omelette
+        </Button>
+        <Button 
+            Click="AddSpaceScramble" 
+            Grid.Row="7" Name="addSpaceScrambleButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Space Scramble
+        </Button>
+        <Button 
+            Click="AddCropCircleOats" 
+            Grid.Row="2"  Grid.Column="1" Name="addCropCircleOatsButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Crop Circle Oats
+        </Button>
+        <Button 
+            Click="AddEvisceratedEggs" 
+            Grid.Row="3"  Grid.Column="1" Name="addEviscertatedEggsButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Eviscerated Eggs
+        </Button>
+        <Button 
+            Click="AddGlowingHaystack" 
+            Grid.Row="4"  Grid.Column="1" Name="addGlowingHaystackButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Glowing Haystack
+        </Button>
+        <Button 
+            Click="AddMissingLinks" 
+            Grid.Row="5"  Grid.Column="1" Name="addMissingLinksButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Missing Links
+        </Button>
+        <Button 
+            Click="AddTakenBacon" 
+            Grid.Row="6"  Grid.Column="1" Name="addTakenBaconButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Taken Bacon
+        </Button>
+        <Button 
+            Click="AddYoureToast" 
+            Grid.Row="7"  Grid.Column="1" Name="addYoureToastButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            You're Toast!
+        </Button>
+        <Button 
+            Click="AddLiquifiedVegetation" 
+            Grid.Row="2"  Grid.Column="2" Name="addLiquifiedVegetationButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Liquified Vegetation
+        </Button>
+        <Button 
+            Click="AddSaucerFuel" 
+            Grid.Row="3"  Grid.Column="2" Name="addSaucerFuelButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Saucer Fuel
+        </Button>
+        <Button 
+            Click="AddWater" 
+            Grid.Row="4"  Grid.Column="2" Name="addWaterButton" 
+            HorizontalAlignment="Left" Width="198" FontSize="18">
+            Water
+        </Button>
+        <Border Name="menuContainer" 
+                Grid.ColumnSpan="4" Grid.RowSpan="8"
+                Button.Click="ReturnToMenu">
+            
+        </Border>
+
+    </Grid>
+</UserControl>
