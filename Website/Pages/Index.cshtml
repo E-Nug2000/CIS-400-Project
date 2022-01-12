@@ -1,0 +1,141 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "The Flying Saucer";
+}
+
+<div class="text-left">
+    <h1 class="display-4">The Flying Saucer</h1>
+    <img src="~/images/Saying.png" alt="Intro Words" />
+    <div>
+        <b>
+            Syrup Flavors: Maple, Cherry, Blackberry, Blueberry, Strawberry
+        </b>
+    </div>
+    <div id="entrees">
+
+
+    </div>
+</div>
+<form id="flying-saucer-home">
+    <div id="search">
+        <input type="text" name="SearchTerms" value="@Model.SearchTerms"/>
+        <input type="submit" value="Search" />
+    </div>
+
+    <div id="filters">
+        <h5>Entrees</h5>
+        <label>
+            <input type="checkbox" name="Category" value="Entrees" checked="@Model.Category.Contains("Entrees")" />
+        </label>
+        <h5>Drinks</h5>
+        <label>
+            <input type="checkbox" name="Category" value="Drinks" checked="@Model.Category.Contains("Drinks")" />
+        </label>
+        <h5>Sides</h5>
+        <label>
+            <input type="checkbox" name="Category" value="Sides" checked="@Model.Category.Contains("Sides")" />
+        </label>
+        <h5>Calories</h5>
+        <div>
+            Between
+            <input name="MinCalories" type="number" min="0" max="2000" step="1" placeholder="min" />
+            And
+            <input name="MaxCalories" type="number" min="0" max="2000" step="1" placeholder="max" />
+        </div>
+        <h5>Price</h5>
+        <div>
+            Between
+            <input name="MinPrice" type="number" min="0" max="50" step="0.01" placeholder="min" />
+            And
+            <input name="MaxPrice" type="number" min="0" max="50" step="0.01" placeholder="max" />
+        </div>
+    </div>
+    <div class="results">
+        <h8>Results:</h8>
+        <div class="item-list">
+            @foreach (TheFlyingSaucer.Data.IOrderItem item in Model.Items)
+            {
+                <div>
+                    <div class="details">
+                            <h class="name">@item.Name</h>
+                            <div class="description">@item.Description</div>
+                            <div class="price">@item.Price</div>
+                            <div class="calories">@item.Calories</div>
+                        @if (item.SpecialInstructions != null)
+                        {
+                            @foreach (string str in item.SpecialInstructions)
+                            {
+                                  <div class="specialInstructions">@str</div>
+                            }
+                        }
+                        @if (item.Name.Contains("Flying Saucer"))
+                        {
+                            <img src="~/Item Images/FlyingSaucer.png" />
+                        }
+                        @if (item.Name.Contains("Crashed Saucer"))
+                        {
+                            <img src="~/Item Images/CrashedSaucer.png" />
+                        }
+                        @if (item.Name.Contains("Livestock Mutilation"))
+                        {
+                            <img src="~/Item Images/LivestockMutilation.png" />
+                        }
+                        @if (item.Name.Contains("Nothing to See Here"))
+                        {
+                            <img src="~/Item Images/NothingToSeeHere.png" />
+                        }
+                        @if (item.Name.Contains("Outer Omelette"))
+                        {
+                            <img src="~/Item Images/OuterOmelette.png" />
+                        }
+                        @if (item.Name.Contains("Space Scramble"))
+                        {
+                            <img src="~/Item Images/SpaceScramble.png" />
+                        }
+                        @if (item.Name.Contains("Crop Circle Oats"))
+                        {
+                            <img src="~/Item Images/CropCircleOats.png" />
+                        }
+                        @if (item.Name.Contains("Eviscerated Eggs"))
+                        {
+                            <img src="~/Item Images/EvisceratedEggs.png" />
+                        }
+                        @if (item.Name.Contains("Glowing Haystack"))
+                        {
+                            <img src="~/Item Images/GlowingHaystack.png" />
+                        }
+                        @if (item.Name.Contains("Missing Links"))
+                        {
+                            <img src="~/Item Images/MissingLinks.png" />
+                        }
+                        @if (item.Name.Contains("Taken Bacon"))
+                        {
+                            <img src="~/Item Images/TakenBacon.png" />
+                        }
+                        @if (item.Name.Contains("You're Toast"))
+                        {
+                            <img src="~/Item Images/YoureToast.png" />
+                        }
+                        @if (item.Name.Contains("Liquified Vegetation"))
+                        {
+                            <img src="~/Item Images/LiquifiedVegetation.png" />
+                        }
+                        @if (item.Name.Contains("Saucer Fuel"))
+                        {
+                            <img src="~/Item Images/SaucerFuel.png" />
+                        }
+                        @if (item.Name.Contains("Water"))
+                        {
+                            <img src="~/Item Images/Water.png" />
+                        }
+                    </div>
+                </div>  
+            }
+        </div>
+    </div>
+    
+</form>
+
+
+
